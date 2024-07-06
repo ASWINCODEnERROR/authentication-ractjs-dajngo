@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
-import jwtDecode from 'jwt-decode';
+// import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 function Navbar() {
     const { user, logoutUser } = useContext(AuthContext);
@@ -10,7 +11,7 @@ function Navbar() {
     let user_id = null;
     if (token) {
         const decoded = jwtDecode(token);
-        user_id = decoded.user_id;
+        user_id = decoded.user_id
     }
 
     return (
@@ -18,7 +19,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <img style={{ width: "120px", padding: "6px" }} src="https://i.imgur.com/juL1aAc.png" alt="" />
+                        {/* <img style={{ width: "120px", padding: "6px" }} src="https://i.imgur.com/juL1aAc.png" alt="" /> */}
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -26,7 +27,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page" href="">Home</a>
                             </li>
                             {!token &&
                                 <>
@@ -41,7 +42,7 @@ function Navbar() {
                             {token &&
                                 <>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Dashboard</a>
+                                        <a className="nav-link" href="/dashboard">Dashboard</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" onClick={logoutUser} style={{ cursor: "pointer" }}>Logout</a>

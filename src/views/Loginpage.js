@@ -1,21 +1,23 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import AuthContext  from "../context/AuthContext"
+import AuthContext from '../context/AuthContext'
+
+
 
 function Loginpage() {
 
-   const {loginUser} =useContext(AuthContext)
-   const handleSubmit = e =>{
+  const {loginUser} = useContext(AuthContext)
+  const handleSubmit = e => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
 
-    email.legth > 0 && loginUser(email,password)
+    email.length > 0 && loginUser(email, password)
 
     console.log(email)
     console.log(password)
-   }
-
+   
+  }
 
   return (
     <div>
@@ -91,9 +93,9 @@ function Loginpage() {
                     </a>
                     <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
                       Don't have an account?{" "}
-                      <link to="/register" style={{ color: "#393f81" }}>
-                        Register now
-                      </link>
+                      <Link to="/register" style={{ color: "#393f81" }}>
+                        Register Now 
+                      </Link>
                     </p>
                     <a href="#!" className="small text-muted">
                       Terms of use.
@@ -117,6 +119,7 @@ function Loginpage() {
     >
       © 2019 - till date Copyright:
       <a className="text-dark" href="https://mdbootstrap.com/">
+        desphixs.com
       </a>
     </div>
   </footer>
