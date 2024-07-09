@@ -28,14 +28,14 @@ function Loginpage() {
         <div className="col col-xl-10">
           <div className="card" style={{ borderRadius: "1rem" }}>
             <div className="row g-0">
-              <div className="col-md-6 col-lg-5 d-none d-md-block">
-                <img
+              {/* <div className="col-md-6 col-lg-5 d-none d-md-block"> */}
+                {/* <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
                   alt="login form"
                   className="img-fluid"
                   style={{ borderRadius: "1rem 0 0 1rem" }}
-                />
-              </div>
+                /> */}
+              {/* </div> */}
               <div className="col-md-6 col-lg-7 d-flex align-items-center">
                 <div className="card-body p-4 p-lg-5 text-black">
                   <form onSubmit={handleSubmit}>
@@ -97,12 +97,12 @@ function Loginpage() {
                         Register Now 
                       </Link>
                     </p>
-                    <a href="#!" className="small text-muted">
+                    {/* <a href="#!" className="small text-muted">
                       Terms of use.
                     </a>
                     <a href="#!" className="small text-muted">
                       Privacy policy
-                    </a>
+                    </a> */}
                   </form>
                 </div>
               </div>
@@ -112,17 +112,7 @@ function Loginpage() {
       </div>
     </div>
   </section>
-  <footer className="bg-light text-center text-lg-start">
-    <div
-      className="text-center p-3"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-    >
-      © 2019 - till date Copyright:
-      <a className="text-dark" href="https://mdbootstrap.com/">
-        desphixs.com
-      </a>
-    </div>
-  </footer>
+  
 </>
 
     </div>

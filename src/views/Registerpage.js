@@ -29,18 +29,11 @@ function Registerpage() {
       <>
         <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
           <div className="container py-5 h-100">
-            <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100" style={{ marginTop: '20px' }}>
               <div className="col col-xl-10">
                 <div className="card" style={{ borderRadius: "1rem" }}>
                   <div className="row g-0">
-                    <div className="col-md-6 col-lg-5 d-none d-md-block">
-                      <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                        alt="login form"
-                        className="img-fluid"
-                        style={{ borderRadius: "1rem 0 0 1rem" }}
-                      />
-                    </div>
+                    
                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
                       <div className="card-body p-4 p-lg-5 text-black">
                         <form onSubmit={handleSubmit}>
@@ -50,7 +43,7 @@ function Registerpage() {
                               style={{ color: "#ff6219" }}
                             />
                             <span className="h2 fw-bold mb-0">
-                              Welcome to <b>Desphixs👋</b>
+                              Welcome to <b>Shopee Hub👋</b>
                             </span>
                           </div>
                           <h5
@@ -115,12 +108,12 @@ function Registerpage() {
                               Login Now
                             </Link>
                           </p>
-                          <a href="#!" className="small text-muted">
+                          {/* <a href="#!" className="small text-muted">
                             Terms of use.
                           </a>
                           <a href="#!" className="small text-muted">
                             Privacy policy
-                          </a>
+                          </a> */}
                         </form>
                       </div>
                     </div>
@@ -130,19 +123,7 @@ function Registerpage() {
             </div>
           </div>
         </section>
-        <footer className="bg-light text-center text-lg-start">
-          {/* Copyright */}
-          <div
-            className="text-center p-3"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-          >
-            © 2019 - till date Copyright:
-            <a className="text-dark" href="https://mdbootstrap.com/">
-              desphixs.com
-            </a>
-          </div>
-          {/* Copyright */}
-        </footer>
+       
     </>
 
     </div>
