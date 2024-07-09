@@ -1,8 +1,8 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PrivateRoute from './utils/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
-
+import PrivateRoute from './utils/PrivateRoute';
 import Homepage from './views/Homepage';
 import Registerpage from './views/Registerpage';
 import Loginpage from './views/Loginpage';
@@ -15,10 +15,12 @@ function App() {
       <AuthProvider>
         <Navbar />
         <Routes>
-          <PrivateRoute component={Dashboard} path="/dashboard" exact />
-          <Route component={Loginpage} path="/login" />
-          <Route component={Registerpage} path="/register" exact />
-          <Route component={Homepage} path="/" exact />
+          {/* Public routes */}
+          <Route path="/login" element={<Loginpage />} />
+          <Route path="/register" element={<Registerpage />} />
+          <Route path="/" element={<Homepage />} />
+          {/* Protected route */}
+          <Route path="/dashboard" element={<PrivateRoute element={<Dashboard />} />} />
         </Routes>
       </AuthProvider>
     </Router>
